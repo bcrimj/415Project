@@ -40,17 +40,5 @@
       "injury",
       "electrical"
     ]
-  },
-  {
-    "id": "12345",
-    "created_at": 1680639001562,
-    "updated_at": 1680639001562,
-    "type": "incident",
-    "subject": "accident",
-    "description": "on duty injury",
-    "status": "current",
-    "recipient": "support@selu.edu",
-    "submitter": "bry@selu.edu",
-    "assignee_id": "4321"
   }
 ]
