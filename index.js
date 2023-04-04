@@ -12,8 +12,10 @@ app.use(
   })
 );
 
-app.listen(port);
-console.log("Server started at http://localhost:" + port);
+app.listen(port, () => {
+  console.log(`server started on port ${port}`);
+});
+
 
 var router = express.Router();
 
@@ -141,4 +143,4 @@ app.get("/rest/ticket/:id", function (req, res) {
     res.end(final);
   });
 });
-app.listen(0, () => console.log("Application is running"));
+
