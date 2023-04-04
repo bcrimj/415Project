@@ -1,0 +1,56 @@
+[
+  {
+    "id": 35436,
+    "created_at": "2015-07-20T22:55:29Z",
+    "updated_at": "2016-05-05T10:38:52Z",
+    "type": "incident",
+    "subject": "MFP not working right",
+    "description": "PC Load Letter? What does that even mean???",
+    "priority": "med",
+    "status": "open",
+    "recipient": "support_example@selu.edu",
+    "submitter": "Michael_bolton@selu.edu",
+    "assignee_id": 235323,
+    "follower_ids": [
+      235323,
+      234
+    ],
+    "tags": [
+      "enterprise",
+      "printers"
+    ]
+  },
+  {
+    "id": 8675309,
+    "created_at": "2015-01-20T22:55:29Z",
+    "updated_at": "2016-11-05T10:38:52Z",
+    "type": "accident",
+    "subject": "somebody shocked themselves",
+    "description": "tried to unplug pc, got shocked",
+    "priority": "high",
+    "status": "open",
+    "recipient": "support_example@selu.edu",
+    "submitter": "Michael_Scott@selu.edu",
+    "assignee_id": 321321,
+    "follower_ids": [
+      321321,
+      234
+    ],
+    "tags": [
+      "injury",
+      "electrical"
+    ]
+  },
+  {
+    "id": "12345",
+    "created_at": 1680639001562,
+    "updated_at": 1680639001562,
+    "type": "incident",
+    "subject": "accident",
+    "description": "on duty injury",
+    "status": "current",
+    "recipient": "support@selu.edu",
+    "submitter": "bry@selu.edu",
+    "assignee_id": "4321"
+  }
+]
