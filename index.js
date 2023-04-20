@@ -190,6 +190,7 @@ app.get("/rest/ticket/:id", function (req, res) {
       const item = database.collection("cmps415");
       const query = { id: req.params.id };
       const list = await item.findOne(query, { projection: { _id: 0 } });
+      console.log(list);
       if (!list) {
         res.send("That id number is not in the system.");
       } else {
@@ -235,40 +236,12 @@ app.put("/rest/ticket/:id", function (req, res) {
       if (!result) {
         res.send("No items match that id number.");
       } else {
-        const id = req.body.id;
-        const ctime = Date.now();
-        const utime = Date.now();
-        const type = req.body.type;
-        const subject = req.body.subject;
-        const description = req.body.description;
-        const priority = req.body.priority;
-        const status = req.body.status;
-        const recipient = req.body.recipient;
-        const submitter = req.body.submitter;
-        const aid = req.body.assignee_id;
-        const follower_ids = req.body.follower_ids;
-        const tags = req.body.tags;
+        var updated = req.body
+        }
 
-        var updated = {
-          $set: {
-          id: id,
-          created_at: ctime,
-          updated_at: utime,
-          type: type,
-          subject: subject,
-          description: description,
-          priority: priority,
-          status: status,
-          recipient: recipient,
-          submitter: submitter,
-          assignee_id: aid,
-          follower_ids: follower_ids,
-          tags: tags,
-        }};
-
-        await item.updateOne(query, updated);
+        await item.findOneAndUpdate(query, {$set: updated}, {new: true});
         res.send(JSON.stringify(updated, null, 2));
-      }
+      
     } finally {
       await client.close();
     }
